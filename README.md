@@ -13,7 +13,7 @@ https://blog.csdn.net/u012364659/article/details/108279540
 任务完成后可以在app/build/bakApk下找到1:基准包apk,2:基准包的混淆文件(如果打开混淆了的话),3基准包的R文件
 #### 打补丁包
 增加补丁代码后
-1. 在gradle ext {}中修改tinkerOldApkPath=基准包的路径,tinkerApplyResourcePath=基准包R文件的路径,tinkerApplyMappingPath=补丁包混淆文件的路径(生成此文件需要在补丁包代码修改完成后运行assemble任务后在bakApk文件夹下找到,和打基准包步骤相同)
+1. 在gradle ext {}中修改tinkerOldApkPath=基准包的路径,tinkerApplyResourcePath=补丁包R文件的路径(没修改似乎可以不填?),tinkerApplyMappingPath=补丁包混淆文件的路径(生成此文件需要在补丁包代码修改完成后运行assemble任务后在bakApk文件夹下找到,和打基准包步骤相同)
 2. gradle->Tasks->tinker->tinkerPatchRelease(Debug)
 任务完成后可以在app/build/outputs/tinkerPatch/release(debug)下找到xxx-patch_signed_7zip.apk.这个就是补丁包,使用TinkerInstaller.onReceiveUpgradePatch()方法即可安装补丁包
 ### 注意事项/总结
