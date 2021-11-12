@@ -4,6 +4,8 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -20,6 +22,9 @@ class MainActivity : AppCompatActivity() {
                 android.os.Environment.getExternalStorageDirectory()
                     .getAbsolutePath() + "/patch_signed_7zip.apk"
             )
+        }
+        findViewById<View>(R.id.toastBtn)?.setOnClickListener {
+            Toast.makeText(this, ".312..iiiiiiiii", Toast.LENGTH_SHORT).show()
         }
     }
 

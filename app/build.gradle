@@ -8,6 +8,15 @@ apply from: 'tinker.gradle'
 android {
     compileSdkVersion 28
 
+    signingConfigs {
+        release {
+            keyAlias 'acorn'
+            keyPassword '123456'
+            storeFile file('acornTest.jks')
+            storePassword '123456'
+        }
+    }
+
     defaultConfig {
         applicationId "com.acorn.test.tinkerdemo"
         minSdkVersion 19
@@ -30,8 +39,10 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            multiDexKeepProguard file("tinker_multidexkeep.pro")
         }
     }
     compileOptions {

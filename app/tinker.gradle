@@ -11,11 +11,11 @@ ext {
 
     //for normal build
     //old apk file to build patch apk
-    tinkerOldApkPath = "${bakPath}/app-debug-1110-17-20-52.apk"
+    tinkerOldApkPath = "${bakPath}/app-release-1112-15-16-10.apk"
     //proguard mapping file to build patch apk
     tinkerApplyMappingPath = "${bakPath}/"
     //resource R.txt to build patch apk, must input if there is resource changed
-    tinkerApplyResourcePath = "${bakPath}/app-debug-1110-17-20-52-R.txt"
+    tinkerApplyResourcePath = "${bakPath}/app-release-1112-15-16-10-R.txt"
 
     //only use for build all flavor, if not, just ignore this field
     tinkerBuildFlavorDirectory = "${bakPath}/"
@@ -51,8 +51,8 @@ if (buildWithTinker()) {
 
     tinkerPatch {
         //解决loader classes are found in old secondary dex.Found classes:XXX问题
-        allowLoaderInAnyDex =true
-        removeLoaderForAllDex = true
+//        allowLoaderInAnyDex =true
+//        removeLoaderForAllDex = true
 
         /**
          * necessary，default 'null'

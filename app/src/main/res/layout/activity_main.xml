@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="啊哦,啊"
+        android:text="方法 啊发的发生"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -20,6 +20,13 @@
         android:id="@+id/loadPatchBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="加载补丁包"
+        android:text="加载补丁包3"
+        />
+
+    <Button
+        android:id="@+id/toastBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="toast2"
         />
 </LinearLayout>
