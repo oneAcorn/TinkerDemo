@@ -50,6 +50,10 @@ if (buildWithTinker()) {
     apply plugin: 'com.tencent.tinker.patch'
 
     tinkerPatch {
+        //解决loader classes are found in old secondary dex.Found classes:XXX问题
+        allowLoaderInAnyDex =true
+        removeLoaderForAllDex = true
+
         /**
          * necessary，default 'null'
          * the old apk path, use to diff with the new apk to build
