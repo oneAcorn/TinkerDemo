@@ -19,6 +19,7 @@ https://blog.csdn.net/u012364659/article/details/108279540
 ### 注意事项/总结
 * 基准包上可以附加数量不限的补丁包
     > 比如补丁包1.1新增了一个页面,补丁包1.2新增了一个按钮.基准包可以先安装补丁包1.1再安装1.2,或者直接安装1.2.两种方式效果一样.
+* Tinker生成的Application里不能写代码,也不能在AndroidManifest中使用继承自Tinker生成的Application的Application.如果需要写的话在ApplicationLike里写.如果在不同的module里,可以在第一个Activity里初始化
 * Can't update AndroidManifest.xml, such as add Android Component.
 * Do not support some Samsung models with os version android-21.
 * Due to Google Play Developer Distribution Agreement, we can't dynamic update our apk.
